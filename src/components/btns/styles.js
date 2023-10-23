@@ -12,6 +12,9 @@ export const textStyles = StyleSheet.create({
   secondary: {
     color: "black",
   },
+  tertiary:{
+    color: "black",
+  }
 });
 
 export const btnStyles = StyleSheet.create({
@@ -20,8 +23,8 @@ export const btnStyles = StyleSheet.create({
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
-    padding: 10,
-    borderRadius: 15,
+    padding: 15,
+    borderRadius: 20,
   },
   primary: {
     backgroundColor: "black",
@@ -29,4 +32,7 @@ export const btnStyles = StyleSheet.create({
   secondary: {
     backgroundColor: "orange",
   },
+  tertiary:{
+    backgroundColor: '#B2B2B2'
+  }
 });

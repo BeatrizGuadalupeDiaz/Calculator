@@ -9,4 +9,4 @@ export interface PropsBtn {
     isLoading?: boolean
 }
 
-export type btnType = 'primary' | 'secondary'
+export type btnType = 'primary' | 'secondary' | 'tertiary'
