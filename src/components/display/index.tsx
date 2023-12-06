@@ -1,11 +1,11 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, TextInput } from 'react-native'
 import { styles } from './style'
 
 const Display = ({value}:any) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{value}</Text>
+      <TextInput style={styles.text} placeholder='0' >{value}</TextInput>
     </View>
   )
 }

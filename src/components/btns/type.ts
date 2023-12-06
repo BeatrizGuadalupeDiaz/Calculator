@@ -1,7 +1,7 @@
 import { FormEvent } from "react"
 
 export interface PropsBtn {
-    text: string,
+    text: string | number,
     textStyle?: any
     type: btnType,
     onPress: (event?: FormEvent<HTMLFormElement> | undefined) => void;
