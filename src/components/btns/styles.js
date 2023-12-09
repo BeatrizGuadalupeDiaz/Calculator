@@ -23,7 +23,7 @@ export const btnStyles = StyleSheet.create({
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
-    padding: 15,
+    padding: 20,
     borderRadius: 20,
   },
   primary: {
