@@ -18,31 +18,31 @@ export const Calculator = () => {
         <View style={{ flex: 0.8 }}>
           <ButtonSet
             typeBtn={"tertiary"}
-            sign={["AC", "DEL", "%"]}
+            signs={["AC", "DEL", "%"]}
             currentValue={currentValue}
             setCurrentValue={setCurrentValue}
           />
           <ButtonSet
             typeBtn={"primary"}
-            sign={[7, 8, 9]}
+            signs={["7", "8", "9"]}
             currentValue={currentValue}
             setCurrentValue={setCurrentValue}
           />
           <ButtonSet
             typeBtn={"primary"}
-            sign={[4, 5, 6]}
+            signs={["4", "5", "6"]}
             currentValue={currentValue}
             setCurrentValue={setCurrentValue}
           />
           <ButtonSet
             typeBtn={"primary"}
-            sign={[1, 2, 3]}
+            signs={["1", "2", "3"]}
             currentValue={currentValue}
             setCurrentValue={setCurrentValue}
           />
           <ButtonSet
             typeBtn={"primary"}
-            sign={["00", "0", "."]}
+            signs={["00", "0", "."]}
             currentValue={currentValue}
             setCurrentValue={setCurrentValue}
           />
@@ -50,7 +50,7 @@ export const Calculator = () => {
         <View style={{ flex: 0.2 }}>
           <ButtonSet
             typeBtn={"secondary"}
-            sign={["/", "*", "-", "+", "="]}
+            signs={["/", "*", "-", "+", "="]}
             flexDirec={STYLE_OPERATOR}
             currentValue={currentValue}
             setCurrentValue={setCurrentValue}

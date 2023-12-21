@@ -1,4 +1,4 @@
-type value = string | number | any;
+type value = string | number;
 interface Props {
   value: value;
   typeBtn: string;
@@ -6,10 +6,10 @@ interface Props {
   currentValue: string;
 }
 
-const handleSetNumber = (number: value, setCurrentValue: any) => {
-  setCurrentValue((prev: string) => prev + number.toString());
+const setNumber = (number: value, setCurrentValue: any) => {
+  setCurrentValue((prev: string) => prev + number);
 };
-const handleMetod = (metod: value, setCurrentValue: any) => {
+const setMetod= (metod: value, setCurrentValue: any) => {
   const useMetod: any = {
     AC: () => setCurrentValue(""),
     DEL: () =>
@@ -19,7 +19,7 @@ const handleMetod = (metod: value, setCurrentValue: any) => {
   };
   useMetod[metod]();
 };
-const handleOperator = (currentValue: string, setCurrentValue: any) => {
+const setOperator = (currentValue: string, setCurrentValue: any) => {
   const operations: any = {
     "+": (a: number, b: number) => a + b,
     "-": (a: number, b: number) => a - b,
@@ -31,6 +31,7 @@ const handleOperator = (currentValue: string, setCurrentValue: any) => {
     if (currentValue.includes(operator)) {
       const splitNumbers = currentValue.split(operator);
       const number = splitNumbers.map(Number).reduce(operations[operator]);
+      console.log(splitNumbers)
       setCurrentValue(number.toString());
       break;
     }
@@ -42,10 +43,10 @@ export const verifyTypeBtn = ({
   setCurrentValue,
   currentValue,
 }: Props) => {
-  const verify: any = {
-    primary: () => handleSetNumber(value, setCurrentValue),
-    secondary: () => handleOperator(currentValue, setCurrentValue),
-    tertiary: () => handleMetod(value, setCurrentValue),
+  const handleTypeBtn: any = {
+    primary: () => setNumber(value,setCurrentValue),
+    secondary: () => setOperator(currentValue, setCurrentValue),
+    tertiary: () => setMetod(value, setCurrentValue),
   };
-  verify[typeBtn]();
+  handleTypeBtn[typeBtn]();
 };
